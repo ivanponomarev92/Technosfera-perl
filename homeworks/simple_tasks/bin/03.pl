@@ -31,7 +31,28 @@ sub run {
     # ...
     # Вычисление минимума и максимума
     # ...
-
+    
+    if ($x<$y)
+    {
+	    $min=$x;
+	    $max=$y;
+    }
+    else
+    {
+	    $min=$y;
+	    $max=$x;
+    }
+    if($z>$max)
+    {
+	    $max=$z;
+    }
+    else
+    {
+	    if($z<$min)
+	    {
+		    $min=$z;
+	    }
+    }
     print "$min, $max\n";
 }
 

@@ -24,14 +24,26 @@ run(1, 4) - печатает "2\n" и "3\n"
 
 sub run {
     my ($x, $y) = @_;
+
     for (my $i = $x; $i <= $y; $i++) {
 
         # ...
         # Проверка, что число простое
         # ...
-
-	print "$i\n";
+        
+	if ($i>1){
+		my $flag=1;
+		for(my $j=2;$j**2<=$i;$j++) {
+			if($i % $j==0)
+			{
+				$flag=0;
+				last;
+			}	
+		}
+		print "$i\n" if $flag==1;
+    	}
     }
 }
 
+#&run(@ARGV);
 1;
