@@ -30,10 +30,8 @@ run(1, 1, 1) - печатает "No solution!\n"
 #sub run; 
 
 sub run {
-#	my $a_value=shift; 
-#	my $b_value=shift;
-#	my $c_value=shift;
-	my ($a_value, $b_value, $c_value) = @_;
+    
+    my ($a_value, $b_value, $c_value) = @_;
     my $x1 = undef;
     my $x2 = undef;
 
@@ -60,8 +58,5 @@ sub run {
     }
     }
 }
-#&run(1,2,1);
-#&run(@ARGV);
 
-
-1
+1;

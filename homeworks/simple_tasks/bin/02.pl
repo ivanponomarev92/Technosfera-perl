@@ -45,5 +45,4 @@ sub run {
     }
 }
 
-#&run(@ARGV);
 1;
