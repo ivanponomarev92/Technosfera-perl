@@ -33,7 +33,21 @@ sub run {
     # ...
     # Вычисление количества вохождений строки $substr в строку $str,
     # ...
-
+    
+    my $len=length $str;
+    my $j=0;
+    while($j<=$len)
+    {
+	    if(index($str,$substr,$j)==-1)
+	    {
+		    last;
+	    }
+	    else
+	    {
+		    $j=index($str,$substr,$j)+length $substr;
+		    $num++;
+    	    }
+    }
     print "$num\n";
 }
 
