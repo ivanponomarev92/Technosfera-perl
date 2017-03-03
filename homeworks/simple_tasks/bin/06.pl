@@ -27,8 +27,13 @@ sub encode {
     # Алгоритм шифрования
     # ...
 
+    for(my $i=0;$i<length($str);$i++)
+    {
+	    $encoded_str.=chr((ord(substr($str,$i,1))+$key)%128);
+    }
     print "$encoded_str\n";
 }
+
 
 =head1 decode ($encoded_str, $key)
 
@@ -49,6 +54,10 @@ sub decode {
     # Алгоритм дешифрования
     # ...
 
+    for(my $i=0;$i<length($encoded_str);$i++)
+    {
+	    $str.=chr(abs((ord(substr($encoded_str,$i,1))-$key%128))%128);
+    }
     print "$str\n";
 }
 
